@@ -1,35 +1,43 @@
-specVersion: 0.0.1
+specVersion: 0.0.4
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum
-    name: Contract
+    name: DataSourceWithContract
     network: mainnet
     source:
       address: "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"
       abi: Contract
+      startBlock: 4605167
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.5
+      apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - Pregnant
-        - Transfer
-        - Approval
         - Birth
-        - ContractUpgrade
       abis:
         - name: Contract
           file: ./abis/Contract.json
       eventHandlers:
-        - event: Pregnant(address,uint256,uint256,uint256)
-          handler: handlePregnant
-        - event: Transfer(address,address,uint256)
-          handler: handleTransfer
-        - event: Approval(address,address,uint256)
-          handler: handleApproval
         - event: Birth(address,uint256,uint256,uint256,uint256)
           handler: handleBirth
-        - event: ContractUpgrade(address)
-          handler: handleContractUpgrade
+      file: ./src/contract.ts
+  - kind: ethereum
+    name: WildcardDataSource
+    network: mainnet
+    source:
+      abi: Contract
+      startBlock: 4605167
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Birth
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: Birth(address,uint256,uint256,uint256,uint256)
+          handler: handleBirth
       file: ./src/contract.ts

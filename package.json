@@ -5,9 +5,9 @@
     "codegen": "graph codegen",
     "build": "graph build",
     "deploy": "graph deploy --node https://api.thegraph.com/deploy/ eva/double-trigger",
-    "create-local": "graph create --node http://localhost:8020/ eva/double-trigger",
-    "remove-local": "graph remove --node http://localhost:8020/ eva/double-trigger",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 eva/double-trigger",
+    "create-local": "graph create --node http://127.0.0.1:8020/ eva/double-trigger",
+    "remove-local": "graph remove --node http://127.0.0.1:8020/ eva/double-trigger",
+    "deploy-local": "graph deploy --node http://127.0.0.1:8020/ --ipfs http://127.0.0.1:5001 eva/double-trigger",
     "test": "graph test"
   },
   "dependencies": {

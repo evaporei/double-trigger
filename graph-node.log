@@ -1,0 +1,207 @@
+Oct 04 09:09:13.350 INFO Graph Node version: 0.27.0 :: fraction2+47 (6180c8989 2022-08-29) dirty 34 modifications
+Oct 04 09:09:13.351 WARN GRAPH_POI_ACCESS_TOKEN not set; might leak POIs to the public via GraphQL
+Oct 04 09:09:13.351 INFO Reading configuration file `graphman.toml`
+Oct 04 09:09:13.356 WARN No fork base URL specified, subgraph forking is disabled
+Oct 04 09:09:13.356 INFO Starting up
+Oct 04 09:09:13.357 INFO Trying IPFS node at: http://127.0.0.1:5001/
+Oct 04 09:09:13.363 INFO Successfully connected to IPFS node at: http://127.0.0.1:5001/
+Oct 04 09:09:13.363 INFO Creating transport, capabilities: archive, traces, url: https://eth-mainnet.alchemyapi.io/v2/$API_KEY, provider: mainnet-0
+Oct 04 09:09:13.806 DEBG Creating firehose networks [1 chains, ingestor lilo]
+Oct 04 09:09:13.807 WARN Expensive queries file not set to a valid file: /etc/graph-node/expensive-queries.txt
+Oct 04 09:09:13.807 DEBG Cleaning up large notifications after about 300s, channel: store_events, component: NotificationListener
+Oct 04 09:09:14.005 INFO Connecting to Postgres, weight: 1, conn_pool_size: 10, url: postgresql://graph-node:HIDDEN_PASSWORD@localhost:5432/graph-node, pool: main, shard: primary
+Oct 04 09:09:14.006 INFO Pool successfully connected to Postgres, pool: main, shard: primary, component: Store
+Oct 04 09:09:14.006 DEBG Using postgres host order [Main], shard: primary, component: Store
+Oct 04 09:09:14.052 INFO Setting up fdw, pool: main, shard: primary, component: ConnectionPool
+Oct 04 09:09:14.060 INFO Running migrations, pool: main, shard: primary, component: ConnectionPool
+Oct 04 09:09:14.068 INFO Migrations finished, pool: main, shard: primary, component: ConnectionPool
+Oct 04 09:09:14.068 INFO Mapping primary, pool: main, shard: primary, component: ConnectionPool
+Oct 04 09:09:14.086 DEBG Cleaning up large notifications after about 300s, channel: chain_head_updates, component: ChainHeadUpdateListener > NotificationListener
+Oct 04 09:09:14.233 INFO Connecting to Ethereum to get network identifier, capabilities: archive, traces, provider: mainnet-0
+Oct 04 09:09:14.233 TRCE Run with retry: net_version RPC call, provider: mainnet-0
+Oct 04 09:09:14.233 TRCE Run with retry: eth_getBlockByNumber(0, false) RPC call, provider: mainnet-0
+Oct 04 09:09:14.451 INFO Connected to Ethereum, capabilities: archive, traces, network_version: 1, provider: mainnet-0
+Oct 04 09:09:14.465 INFO Creating LoadManager in disabled mode, component: LoadManager
+Oct 04 09:09:14.478 INFO Starting JSON-RPC admin server at: http://localhost:8020, component: JsonRpcServer
+Oct 04 09:09:14.480 INFO Starting GraphQL HTTP server at: http://localhost:8000, component: GraphQLServer
+Oct 04 09:09:14.480 INFO Starting index node server at: http://localhost:8030, component: IndexNodeServer
+Oct 04 09:09:14.480 INFO Starting metrics server at: http://localhost:8040, component: MetricsServer
+Oct 04 09:09:14.480 INFO Starting GraphQL WebSocket server at: ws://localhost:8001, component: SubscriptionServer
+Oct 04 09:09:14.481 INFO Started all assigned subgraphs, node_id: default, count: 0, component: SubgraphRegistrar
+Oct 04 09:09:23.934 INFO Received subgraph_deploy request, params: SubgraphDeployParams { name: SubgraphName("eva/double-trigger"), ipfs_hash: DeploymentHash("QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67"), node_id: None, debug_fork: None }, component: JsonRpcServer
+Oct 04 09:09:23.971 TRCE IPFS cache miss, hash: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.972 TRCE Run with retry: IPFS stat, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.989 TRCE Run with retry: ipfs.cat, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.989 DEBG Features {}, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.989 INFO Resolve schema, link: /ipfs/QmTkdJuUsse44hkiGmnDqEYv1JT3bNdAGFHeqcmBaH2cFa, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.989 TRCE IPFS cache miss, hash: QmTkdJuUsse44hkiGmnDqEYv1JT3bNdAGFHeqcmBaH2cFa, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.990 TRCE Run with retry: IPFS stat, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.990 INFO Resolve data source, source_start_block: 4605167, source_address: Some(0x06012c8cf97bead5deae237070f9587f8e7a266d), name: DataSourceWithContract, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.990 INFO Resolve mapping, link: /ipfs/QmPTRN2d47rpti1RgdAnvZV4vLvrqTKtavEKiApKJpC8nX, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.990 INFO Resolve ABI, link: /ipfs/QmQvb5vEMzdLHxFspAgtnxWrEzt4Xw5WC7XiS2ZdAcahJu, name: Contract, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.990 TRCE IPFS cache miss, hash: QmQvb5vEMzdLHxFspAgtnxWrEzt4Xw5WC7XiS2ZdAcahJu, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.990 TRCE Run with retry: IPFS stat, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.990 TRCE IPFS cache miss, hash: QmPTRN2d47rpti1RgdAnvZV4vLvrqTKtavEKiApKJpC8nX, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.990 TRCE Run with retry: IPFS stat, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.990 INFO Resolve data source, source_start_block: 4605167, source_address: None, name: WildcardDataSource, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.991 INFO Resolve mapping, link: /ipfs/QmPTRN2d47rpti1RgdAnvZV4vLvrqTKtavEKiApKJpC8nX, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.991 INFO Resolve ABI, link: /ipfs/QmQvb5vEMzdLHxFspAgtnxWrEzt4Xw5WC7XiS2ZdAcahJu, name: Contract, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.991 TRCE IPFS cache miss, hash: QmQvb5vEMzdLHxFspAgtnxWrEzt4Xw5WC7XiS2ZdAcahJu, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.991 TRCE Run with retry: IPFS stat, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.991 TRCE IPFS cache miss, hash: QmPTRN2d47rpti1RgdAnvZV4vLvrqTKtavEKiApKJpC8nX, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.991 TRCE Run with retry: IPFS stat, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.991 TRCE Run with retry: ipfs.cat, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.991 TRCE Run with retry: ipfs.cat, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.991 TRCE Run with retry: ipfs.cat, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.991 TRCE Run with retry: ipfs.cat, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.992 TRCE Run with retry: ipfs.cat, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:23.992 TRCE Run with retry: eth_getBlockByNumber RPC call for block number 4605166, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:24.027 INFO Set subgraph start block, block: Some(#4605166 (06dd1667830524e6d988510b9bf08d82b708712619d54706df36431a002ac219)), sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:24.027 INFO Graft base, block: None, base: None, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:24.138 DEBG Wrote new subgraph version to store, subgraph_hash: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, subgraph_name: eva/double-trigger, sgd: 0, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:24.640 TRCE Received assignment change, operation: Set, deployment: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67[13], component: SubgraphRegistrar
+Oct 04 09:09:24.646 DEBG Deployment assignee is this node, broadcasting add event, node_id: default, assigned_to: default, component: SubgraphRegistrar
+Oct 04 09:09:24.646 DEBG Received assignment event: Add { deployment: DeploymentLocator { id: DeploymentId(13), hash: DeploymentHash("QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67") }, node_id: NodeId("default") }, component: SubgraphRegistrar
+Oct 04 09:09:24.646 TRCE Start subgraph, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:24.646 TRCE IPFS cache hit, hash: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphAssignmentProvider
+Oct 04 09:09:24.647 DEBG Subgraph started, start_ms: 1, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphRegistrar
+Oct 04 09:09:24.760 INFO Starting subgraph writer, queue_size: 5, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.794 INFO Resolve subgraph files using IPFS, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.794 DEBG Features {}, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.794 INFO Resolve schema, link: /ipfs/QmTkdJuUsse44hkiGmnDqEYv1JT3bNdAGFHeqcmBaH2cFa, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.795 TRCE IPFS cache hit, hash: QmTkdJuUsse44hkiGmnDqEYv1JT3bNdAGFHeqcmBaH2cFa, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.795 INFO Resolve data source, source_start_block: 4605167, source_address: Some(0x06012c8cf97bead5deae237070f9587f8e7a266d), name: DataSourceWithContract, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.795 INFO Resolve mapping, link: /ipfs/QmPTRN2d47rpti1RgdAnvZV4vLvrqTKtavEKiApKJpC8nX, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.795 INFO Resolve ABI, link: /ipfs/QmQvb5vEMzdLHxFspAgtnxWrEzt4Xw5WC7XiS2ZdAcahJu, name: Contract, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.795 TRCE IPFS cache hit, hash: QmQvb5vEMzdLHxFspAgtnxWrEzt4Xw5WC7XiS2ZdAcahJu, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.799 TRCE IPFS cache hit, hash: QmPTRN2d47rpti1RgdAnvZV4vLvrqTKtavEKiApKJpC8nX, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.799 INFO Resolve data source, source_start_block: 4605167, source_address: None, name: WildcardDataSource, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.799 INFO Resolve mapping, link: /ipfs/QmPTRN2d47rpti1RgdAnvZV4vLvrqTKtavEKiApKJpC8nX, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.799 INFO Resolve ABI, link: /ipfs/QmQvb5vEMzdLHxFspAgtnxWrEzt4Xw5WC7XiS2ZdAcahJu, name: Contract, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.800 TRCE IPFS cache hit, hash: QmQvb5vEMzdLHxFspAgtnxWrEzt4Xw5WC7XiS2ZdAcahJu, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.803 TRCE IPFS cache hit, hash: QmPTRN2d47rpti1RgdAnvZV4vLvrqTKtavEKiApKJpC8nX, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.808 TRCE Loaded dynamic data sources, ms: 4, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.808 INFO Successfully resolved subgraph files using IPFS, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:24.808 INFO Data source count at start: 2, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:25.000 DEBG Requesting 0 block(s), sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.012 DEBG Starting or restarting subgraph, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:25.012 DEBG subscribing to chain head updates, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.012 TRCE Run with retry: chain_id RPC call, provider: mainnet-0
+Oct 04 09:09:25.084 DEBG Starting block stream, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:25.090 TRCE Chain head pointer, number: 15534975, hash: 0x60f5c0b5a1f929cf5de4a3c8be59f1e6017209a42c38ab2c1aadbeb20d757c39, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.090 TRCE Subgraph pointer, number: 4605166, hash: Some(0x06dd1667830524e6d988510b9bf08d82b708712619d54706df36431a002ac219), sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.090 TRCE Run with retry: eth_getBlockByNumber RPC call for block number 4605166, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.148 INFO Scanning blocks [4605167, 4605167], range_size: 1, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+[chain/ethereum/src/ethereum_adapter.rs:258] "from {}" = "from {}"
+[chain/ethereum/src/ethereum_adapter.rs:258] from = 4605167
+[chain/ethereum/src/ethereum_adapter.rs:259] "to {}" = "to {}"
+[chain/ethereum/src/ethereum_adapter.rs:259] to = 4605167
+[chain/ethereum/src/ethereum_adapter.rs:260] "filter.contracts {}" = "filter.contracts {}"
+[chain/ethereum/src/ethereum_adapter.rs:260] &filter.contracts = []
+[chain/ethereum/src/ethereum_adapter.rs:261] "filter.event_signatures {}" = "filter.event_signatures {}"
+[chain/ethereum/src/ethereum_adapter.rs:261] &filter.event_signatures = [
+    0x0a5311bd2a6608f08a180df2ee7c5946819a649b204b554bb8e39825b2c50ad5,
+]
+[chain/ethereum/src/ethereum_adapter.rs:262] "log_filter {:?}" = "log_filter {:?}"
+[chain/ethereum/src/ethereum_adapter.rs:262] &log_filter = Filter {
+    from_block: Some(
+        Number(
+            4605167,
+        ),
+    ),
+    to_block: Some(
+        Number(
+            4605167,
+        ),
+    ),
+    block_hash: None,
+    address: Some(
+        ValueOrArray(
+            [],
+        ),
+    ),
+    topics: Some(
+        [
+            Some(
+                ValueOrArray(
+                    [
+                        0x0a5311bd2a6608f08a180df2ee7c5946819a649b204b554bb8e39825b2c50ad5,
+                    ],
+                ),
+            ),
+        ],
+    ),
+    limit: None,
+}
+Oct 04 09:09:25.148 TRCE Run with retry: eth_getBlockByNumber RPC call for block number 4605167, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.150 DEBG Requesting logs for blocks [4605167, 4605167], event 0x0a5311bd2a6608f08a180df2ee7c5946819a649b204b554bb8e39825b2c50ad5, 0 contracts, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+[chain/ethereum/src/ethereum_adapter.rs:258] "from {}" = "from {}"
+[chain/ethereum/src/ethereum_adapter.rs:258] from = 4605167
+[chain/ethereum/src/ethereum_adapter.rs:259] "to {}" = "to {}"
+[chain/ethereum/src/ethereum_adapter.rs:259] to = 4605167
+[chain/ethereum/src/ethereum_adapter.rs:260] "filter.contracts {}" = "filter.contracts {}"
+[chain/ethereum/src/ethereum_adapter.rs:260] &filter.contracts = [
+    0x06012c8cf97bead5deae237070f9587f8e7a266d,
+]
+[chain/ethereum/src/ethereum_adapter.rs:261] "filter.event_signatures {}" = "filter.event_signatures {}"
+[chain/ethereum/src/ethereum_adapter.rs:261] &filter.event_signatures = [
+    0x0a5311bd2a6608f08a180df2ee7c5946819a649b204b554bb8e39825b2c50ad5,
+]
+[chain/ethereum/src/ethereum_adapter.rs:262] "log_filter {:?}" = "log_filter {:?}"
+[chain/ethereum/src/ethereum_adapter.rs:262] &log_filter = Filter {
+    from_block: Some(
+        Number(
+            4605167,
+        ),
+    ),
+    to_block: Some(
+        Number(
+            4605167,
+        ),
+    ),
+    block_hash: None,
+    address: Some(
+        ValueOrArray(
+            [
+                0x06012c8cf97bead5deae237070f9587f8e7a266d,
+            ],
+        ),
+    ),
+    topics: Some(
+        [
+            Some(
+                ValueOrArray(
+                    [
+                        0x0a5311bd2a6608f08a180df2ee7c5946819a649b204b554bb8e39825b2c50ad5,
+                    ],
+                ),
+            ),
+        ],
+    ),
+    limit: None,
+}
+Oct 04 09:09:25.151 TRCE Run with retry: eth_getLogs RPC call for block range: [4605167..4605167], sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.153 DEBG Requesting logs for blocks [4605167, 4605167], contract 0x06012c8cf97bead5deae237070f9587f8e7a266d, 1 events, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.154 TRCE Run with retry: eth_getLogs RPC call for block range: [4605167..4605167], sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.308 DEBG to block 4605167 from block 4605167 logs size 1, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.308 DEBG filter contract 0x06012c8cf97bead5deae237070f9587f8e7a266d, 1 events, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.309 DEBG logs [Log { address: 0x06012c8cf97bead5deae237070f9587f8e7a266d, topics: [0x0a5311bd2a6608f08a180df2ee7c5946819a649b204b554bb8e39825b2c50ad5], data: Bytes("0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"), block_hash: Some(0x79c943cb77f647e0553a101d0c1df2d05645782b3a1ac8d3cabc593eb4fc3fa3), block_number: Some(4605167), transaction_hash: Some(0x691f348ef11e9ef95d540a2da2c5f38e36072619aa44db0827e1b8a276f120f4), transaction_index: Some(68), log_index: Some(21), transaction_log_index: None, log_type: None, removed: Some(false) }], sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.316 DEBG to block 4605167 from block 4605167 logs size 1, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.317 DEBG filter event 0x0a5311bd2a6608f08a180df2ee7c5946819a649b204b554bb8e39825b2c50ad5, 0 contracts, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.317 DEBG logs [Log { address: 0x06012c8cf97bead5deae237070f9587f8e7a266d, topics: [0x0a5311bd2a6608f08a180df2ee7c5946819a649b204b554bb8e39825b2c50ad5], data: Bytes("0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"), block_hash: Some(0x79c943cb77f647e0553a101d0c1df2d05645782b3a1ac8d3cabc593eb4fc3fa3), block_number: Some(4605167), transaction_hash: Some(0x691f348ef11e9ef95d540a2da2c5f38e36072619aa44db0827e1b8a276f120f4), transaction_index: Some(68), log_index: Some(21), transaction_log_index: None, log_type: None, removed: Some(false) }], sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.365 DEBG Found 1 relevant block(s), sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.402 DEBG Requesting 0 block(s), sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.406 DEBG Processing 2 triggers, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.407 DEBG 2 candidate triggers in this block, block_hash: 0x79c943cb77f647e0553a101d0c1df2d05645782b3a1ac8d3cabc593eb4fc3fa3, block_number: 4605167, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:25.412 TRCE Start processing trigger, data_source: DataSourceWithContract, handler: handleBirth, transaction: 0x691f…20f4, address: 0x0601…266d, signature: Birth(address,uint256,uint256,uint256,uint256), sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:25.412 TRCE Chain head pointer, number: 15534975, hash: 0x60f5c0b5a1f929cf5de4a3c8be59f1e6017209a42c38ab2c1aadbeb20d757c39, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.413 TRCE Subgraph pointer, number: 4605167, hash: Some(0x79c943cb77f647e0553a101d0c1df2d05645782b3a1ac8d3cabc593eb4fc3fa3), sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.413 TRCE Run with retry: eth_getBlockByNumber RPC call for block number 4605167, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: BlockStream
+Oct 04 09:09:25.425 INFO Done processing trigger, gas_used: 54209061, data_source: DataSourceWithContract, handler: handleBirth, total_ms: 13, transaction: 0x691f…20f4, address: 0x0601…266d, signature: Birth(address,uint256,uint256,uint256,uint256), sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:25.426 TRCE Start processing trigger, data_source: WildcardDataSource, handler: handleBirth, transaction: 0x691f…20f4, address: 0x0601…266d, signature: Birth(address,uint256,uint256,uint256,uint256), sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:25.435 INFO Done processing trigger, gas_used: 54209061, data_source: WildcardDataSource, handler: handleBirth, total_ms: 9, transaction: 0x691f…20f4, address: 0x0601…266d, signature: Birth(address,uint256,uint256,uint256,uint256), sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:25.436 TRCE Start processing trigger, data_source: DataSourceWithContract, handler: handleBirth, transaction: 0x691f…20f4, address: 0x0601…266d, signature: Birth(address,uint256,uint256,uint256,uint256), sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:25.444 INFO Done processing trigger, gas_used: 54209061, data_source: DataSourceWithContract, handler: handleBirth, total_ms: 7, transaction: 0x691f…20f4, address: 0x0601…266d, signature: Birth(address,uint256,uint256,uint256,uint256), sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:25.444 TRCE Start processing trigger, data_source: WildcardDataSource, handler: handleBirth, transaction: 0x691f…20f4, address: 0x0601…266d, signature: Birth(address,uint256,uint256,uint256,uint256), sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:25.451 INFO Done processing trigger, gas_used: 54209061, data_source: WildcardDataSource, handler: handleBirth, total_ms: 7, transaction: 0x691f…20f4, address: 0x0601…266d, signature: Birth(address,uint256,uint256,uint256,uint256), sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
+Oct 04 09:09:25.461 INFO Applying 1 entity operation(s), block_hash: 0x79c943cb77f647e0553a101d0c1df2d05645782b3a1ac8d3cabc593eb4fc3fa3, block_number: 4605167, sgd: 13, subgraph_id: QmSYfvX2MQLiwUcvhLnc7ANKM5VjqWiaeVWEfBxM5M7v67, component: SubgraphInstanceManager
